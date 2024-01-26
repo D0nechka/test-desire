@@ -7,7 +7,10 @@ const App = () => {
     <div className="wrapper">
         <Cursor/>
       <Magnet>
-        <button className="btn">Сохранить</button>
+        <button>Сохранить</button>
+        <div className="force">
+          123123
+        </div>
       </Magnet>
     </div>
   );

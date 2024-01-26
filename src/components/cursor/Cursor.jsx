@@ -5,7 +5,11 @@ export const Cursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
-    setPosition({ x: e.pageX, y: e.pageY });
+
+  const mouseX = e.pageX - 14;
+  const mouseY = e.pageY - 14; // хуета решение
+  
+    setPosition({ x: mouseX, y: mouseY});
   };
 
   useEffect(() => {

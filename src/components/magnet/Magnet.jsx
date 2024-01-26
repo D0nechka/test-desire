@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import './Magnet.css'; // Подключаем стили для компонента Magnet
 
 const Magnet = ({ children }) => {
   const [cursorSize, setCursorSize] = useState({ width: 50, height: 50 });
