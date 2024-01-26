@@ -1,0 +1,10 @@
+.custom-cursor {
+    width: 50px; /* начальная ширина */
+    height: 50px; /* начальная высота */
+    border: 1px solid black;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease; /* плавное изменение размеров и позиции */
+  }
