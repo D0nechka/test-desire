@@ -1,4 +1,4 @@
-import { Cursor } from "./components/cursor/Cursor";
+import  {Cursor}  from "./components/cursor/Cursor";
 import Magnet from "./components/magnet/Magnet";
 import './index.css';
 
@@ -7,11 +7,10 @@ const App = () => {
     <div className="wrapper">
         <Cursor/>
       <Magnet>
-        <button>Сохранить</button>
-        <div className="force">
-          123123
-        </div>
+        <button className="btn">Сохранить</button>
+        <div className="welcome"> Hi there</div>
       </Magnet>
+      <button className="btn">Сохранить</button>
     </div>
   );
 };

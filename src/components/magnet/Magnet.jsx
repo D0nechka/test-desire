@@ -1,47 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-const Magnet = ({ children }) => {
-  const [cursorSize, setCursorSize] = useState({ width: 50, height: 50 });
-  const [hoveredElement, setHoveredElement] = useState(null);
+class Magnet extends React.Component {
+  render() {
+    const childrenWithProps = React.Children.map(this.props.children, child => {
+      return React.cloneElement(child, {
+        className: (child.props.className || '') + ' magnetizable'
+      });
+    });
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const targetElement = document.elementFromPoint(e.clientX, e.clientY);
-
-      if (targetElement && targetElement.classList.contains('magnetizable')) {
-        const { width, height, top, left } = targetElement.getBoundingClientRect();
-        setCursorSize({ width, height });
-        setHoveredElement({ top, left });
-      } else {
-        setHoveredElement(null);
-      }
-    };
-
-    document.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
-  return (
-    <>
-      {hoveredElement && (
-        <div
-          className="custom-cursor"
-          style={{
-            width: cursorSize.width + 'px',
-            height: cursorSize.height + 'px',
-            top: hoveredElement.top + 'px',
-            left: hoveredElement.left + 'px',
-          }}
-        />
-      )}
-      {React.Children.map(children, (child) => {
-        return React.cloneElement(child, { className: 'magnetizable' });
-      })}
+    return (
+      <>
+      {childrenWithProps}
     </>
-  );
-};
+    );
+  }
+}
 
 export default Magnet;
