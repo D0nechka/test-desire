@@ -4,13 +4,17 @@ import './index.css';
 
 const App = () => {
   return (
-    <div className="wrapper">
+    <div>
+      <div className="wrapper">
         <Cursor/>
       <Magnet>
         <button className="btn">Сохранить</button>
-        <div className="welcome"> Hi there</div>
       </Magnet>
-      <button className="btn">Сохранить</button>
+      <button className="btn1">Сохранить</button>
+    </div>
+    <Magnet>
+        <div className="welcome" style={{width: '100px', height: '100px'}}> Hi there</div>
+      </Magnet>
     </div>
   );
 };

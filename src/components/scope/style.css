@@ -1,0 +1,41 @@
+.scope {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-19px, -19px); 
+  }
+  
+  .top-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+    }
+  
+    .top-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 16px;
+      height: 16px;
+    }
+  
+    .bottom-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+    }
+  
+    .bottom-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 16px;
+      height: 16px;
+    }

@@ -1,0 +1,17 @@
+.red {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    z-index: 999;
+}
+
+.red::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -20px;
+    bottom: -20px;
+    left: -30px;
+    z-index: -1;
+    background: transparent;
+}

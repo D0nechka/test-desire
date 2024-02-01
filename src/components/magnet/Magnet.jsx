@@ -1,19 +1,16 @@
 import React from 'react';
+import './style.css'
 
-class Magnet extends React.Component {
-  render() {
-    const childrenWithProps = React.Children.map(this.props.children, child => {
-      return React.cloneElement(child, {
-        className: (child.props.className || '') + ' magnetizable'
-      });
-    });
+const Magnet = ({ children }) => {
+  const childrenWithProps = React.Children.map(children, child => {
+    return React.cloneElement(child);
+  });
 
-    return (
-      <>
+  return (
+    <div className='red'>
       {childrenWithProps}
-    </>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Magnet;

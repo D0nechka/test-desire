@@ -1,5 +1,5 @@
 *{
-  cursor: url('../assets/cursor.png'), auto;
+  cursor: url('./assets/cursor.png'), auto;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 
 button {
   width: 200px;
-  height: 60px;
+  height: 150px;
   padding: 0;
   background:none;
   text-decoration: none;

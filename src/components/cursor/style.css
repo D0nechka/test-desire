@@ -5,18 +5,29 @@
     pointer-events: none;
     z-index: 9999;
     mix-blend-mode: difference;
-    transform: translate(-39%, -35%); 
+    /* transform: translate(-39%, -35%);  */
+  }
+
+  .scope {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px; /* Можете задать нужные вам размеры */
+    height: 50px; /* Можете задать нужные вам размеры */
   }
 
   .custom-cursor.magnetizable {
     transition-duration: 0.3s;
     mix-blend-mode: initial;
     transform: translate(0px, 0px); 
+    /* margin-left: 30px;
+    margin-right: 21px;
+    margin-top: 26px;
+    margin-bottom: 18px; */
   }
 
   .custom-cursor.magnetizable .corner-svg path {
     transition-duration: 2s;
-    stroke: red;
     z-index: 99999;
   }
 
@@ -43,3 +54,24 @@
     bottom: 0;
     right: 0
   }
+
+/* .scope.custom-cursor-first {
+  animation: cursor-pulse 1s ease-in-out forwards;
+}
+.scope.custom-cursor-second {
+  animation: cursor-pulse 2s ease-in-out forwards;
+}
+.scope.custom-cursor-third {
+  animation: cursor-pulse 3s ease-in-out forwards;
+}
+
+  @keyframes cursor-pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1
+    }
+    100% {
+      transform: scale(1.7);
+      opacity: 0;
+    }
+  } */
